@@ -1,0 +1,29 @@
+extends layout
+
+block content
+
+    div
+
+      h1(style='color: darkmagenta') Itinerary for &nbsp &nbsp &nbsp &nbsp
+          span.colortext
+              |#{first_name} #{last_name}
+      h1(style='color: darkmagenta') Trip from &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+          span.colortext
+              |#{from} to #{to}
+      h1(style='color: darkmagenta') Departure date: &nbsp
+          span.colortext
+              | #{calendar}
+      h1(style='color: darkmagenta') Departure time: &nbsp
+          span.colortext
+              |7:15 AM
+      h1(style='color: darkmagenta') Travel time: &nbsp &nbsp &nbsp &nbsp
+          span.colortext
+              |2hr 15min
+      h1(style='color: darkmagenta') Arrival time: &nbsp &nbsp &nbsp
+          span.colortext
+              |9:30 AM
+
+
+
+
+

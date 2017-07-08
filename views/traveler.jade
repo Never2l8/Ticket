@@ -1,0 +1,35 @@
+extends layout
+block content
+    form(action='/process-traveler-data', method='POST')
+        h1(style='color: olivedrab') Tell us who is traveling
+        h1(style='color: darkmagenta') Traveler #1
+        select(name='Select')
+            option(value='select') Select
+            option(value='mr') Mr.
+            option(value='ms') Ms.
+        | &nbsp &nbsp
+        input(type='text', name='first_name', placeholder='First name')
+        | &nbsp &nbsp
+        input(type='text', name='last_name', placeholder='Last name')
+        | &nbsp &nbsp
+        select(name='country')
+            option(value='country_of_residence') Country of Residence
+            option(value='england') England
+            option(value='russia') Russia
+            option(value='switzerland') Switzerland
+            option(value='usa') U.S.A.
+            option(value='ukraine') Ukraine
+        | &nbsp &nbsp
+        input(type='submit', name='add_to_itinerary', value='ADD TO ITINERARY')
+        input(type='text', name='from', hidden, value=from)
+        input(type='text', name='to', hidden, value=to)
+        input(type='date', name='date', hidden, value=calendar)
+        //select(name='passenger_type', hidden)
+        //option(value='adult') Adult(13+)
+        //    var pas_type = {passenger_type: }
+        //    if
+        //    option(value='senior',) Senior(60+)
+        //    option(value='child', ) Child(2-12)
+        //    option(value='infant') Infant
+        //    option(value='student') Student
+

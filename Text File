@@ -1,0 +1,20 @@
+CREATE TABLE public.TRAVEL_DATA
+(
+    id SERIAL PRIMARY KEY,
+    from_city VARCHAR(60) NOT NULL,
+    to_city VARCHAR(60) NOT NULL,
+    date DATE NOT NULL,
+    passenger_category VARCHAR(60)
+); 
+
+CREATE TABLE public.PASSENGER_DATA
+(
+    id SERIAL PRIMARY KEY NOT NULL,
+    gender VARCHAR(60) NOT NULL,
+    first_name VARCHAR(60) NOT NULL,
+    last_name VARCHAR(60) NOT NULL,
+    country_of_residence VARCHAR(60) NOT NULL,
+    CONSTRAINT PASSENGER_DATA_country_of_residence_country_fk FOREIGN KEY (country_of_residence) REFERENCES country_of_residence (country)
+);
+
+CONSTRAINT PASSENGER_DATA_gender__fk FOREIGN KEY (gender) REFERENCES gender ()

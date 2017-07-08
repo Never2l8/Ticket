@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    h2(style='color: darkolivegreen') Find Train Tickets
+    br
+    h1(style='color: darkmagenta') Where Are You Going?
+    form(action='/api/ticket', method='POST')
+        input(type='text', name='from', placeholder='From')
+        | &nbsp &nbsp
+        input(type='text', name='to', placeholder='To')
+        | &nbsp &nbsp
+        input(type='date', name='date')
+        | &nbsp &nbsp
+        br
+        br
+        h1(style='color: darkmagenta') Who is traveling?
+        select(name='passenger_type')
+            option(value='adult') Adult(13+)
+            option(value='senior') Senior(60+)
+            option(value='child') Child(2-12)
+            option(value='infant') Infant
+            option(value='student') Student
+        | &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        input(type='submit', name='search', value='SEARCH >', style='width: 100px; height: 50px; background: orangered; font-size: 17px ')
+
+
